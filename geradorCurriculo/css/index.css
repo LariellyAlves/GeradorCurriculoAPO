@@ -22,3 +22,16 @@ header {
     padding-right: 3%;
     color: #883677;
 }
+
+.btn_add_experiencia, .btn_add_formacao {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #883677; 
+    border-radius: 50%; 
+    background-color: transparent;
+    color: #883677; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+    margin-top: 20px;
+}
