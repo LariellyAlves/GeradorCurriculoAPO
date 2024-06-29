@@ -24,53 +24,53 @@
 
     <form action="geraPdfCurriculo.php" method="post" id="formularioCurriculo">
         <div class="alinhaCampo">
-            <label for="fname" class="form-label">Nome Completo:</label>
-            <input type="text" id="fname" class="form-control" required>
+            <label for="nomeCompleto" class="form-label">Nome Completo:</label>
+            <input type="text" id="nomeCompleto" name="nomeCompleto" class="form-control" required>
         </div>
 
         <div class="row alinhaCampo">
             <div class="col-6">
-                <label for="fnacionalidade" class="form-label">Nacionalidade:</label>
-                <input type="text" id="fnacionalidade" class="form-control" required>
+                <label for="nacionalidade" class="form-label">Nacionalidade:</label>
+                <input type="text" id="nacionalidade" name="nacionalidade" class="form-control" required>
             </div>
             <div class="col-3">
-                <label for="fsexo" class="form-label">Sexo:</label>
-                <input type="text" id="fsexo" class="form-control" required>
+                <label for="sexo" class="form-label">Sexo:</label>
+                <input type="text" id="sexo" name="sexo" class="form-control" required>
             </div>
             <div class="col-3">
-                <label for="fidade" class="form-label">Idade:</label>
-                <input type="text" id="fidade" class="form-control" required>
+                <label for="idade" class="form-label">Idade:</label>
+                <input type="text" id="idade" name="idade" class="form-control" required>
             </div>
         </div>
 
         <div class="alinhaCampo">
-            <label for="fendereco" class="form-label">Endereço:</label>
-            <input type="text" id="fendereco" class="form-control" required>
+            <label for="endereco" class="form-label">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" class="form-control" required>
         </div>
 
         <div class="row alinhaCampo">
             <div class="col-6">
-                <label for="festado" class="form-label">Estado:</label>
-                <input type="text" id="festado" class="form-control" required>
+                <label for="estado" class="form-label">Estado:</label>
+                <input type="text" id="estado" name="estado" class="form-control" required>
             </div>
             <div class="col-6">
-                <label for="fcidade" class="form-label">Cidade:</label>
-                <input type="text" id="fcidade" class="form-control" required>
+                <label for="cidade" class="form-label">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" class="form-control" required>
             </div>
         </div>
 
         <div class="row alinhaCampo">
             <div class="col-3">
-                <label for="ftelefone" class="form-label">Telefone:</label>
-                <input type="text" id="ftelefone" class="form-control" required>
+                <label for="telefone" class="form-label">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" class="form-control" required>
             </div>
             <div class="col-3">
-                <label for="fcelular" class="form-label">Celular:</label>
-                <input type="text" id="fcelular" class="form-control" required>
+                <label for="celular" class="form-label">Celular:</label>
+                <input type="text" id="celular" name="celular" class="form-control" required>
             </div>
             <div class="col-6">
-                <label for="femail" class="form-label">E-mail:</label>
-                <input type="email" id="femail" class="form-control" required>
+                <label for="email" class="form-label">E-mail:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
             </div>
         </div>
         
@@ -83,7 +83,7 @@
         </div>
 
         <div class="alinhaCampo">
-            <input type="text" id="fobjetivo" class="form-control" required>
+            <input type="text" id="objetivo" name="objetivo" class="form-control" required>
         </div>
 
         <hr style="border-color: #883677; margin: 20px 20px;">
@@ -95,20 +95,19 @@
         </div>
 
         <template id="template_formacao">
-
             <div class="alinhaCampo">
-                <label for="fcurso" class="form-label">Curso:</label>
-                <input type="text" id="fcurso" class="form-control" required>
+                <label for="curso[]" class="form-label">Curso:</label>
+                <input type="text" id="curso" name="cursos[]" class="form-control" required>
             </div>
 
             <div class="row alinhaCampo">
                 <div class="col-9">
-                    <label for="finst" class="form-label">Instituição:</label>
-                    <input type="text" id="finst" class="form-control" required>
+                    <label for="instituicao[]" class="form-label">Instituição:</label>
+                    <input type="text" id="instituicao" name="instituicoes[]" class="form-control" required>
                 </div>
                 <div class="col-3">
-                    <label for="fdateConclusao" class="form-label">Ano de Conclusão:</label>
-                    <input type="date" id="fdateConclusao" class="form-control" required>
+                    <label for="dataConclusao[]" class="form-label">Ano de Conclusão:</label>
+                    <input type="date" id="dataConclusao" name="datasConclusao[]" class="form-control" required>
                 </div>
             </div>
             <hr style="border-color: #883677; margin: 20px 20px;">
@@ -121,7 +120,7 @@
                 <button   button type="button" class="btn_add_formacao">+</button>
             </div>
             <div class="col-11">
-                <label for="addCurso" class="form-label" style="margin-top: 22px; margin-left: -145px;">Adicionar Formação</label>
+                <label for="addCurso" class="form-label" style="margin-top: 22px; margin-left: -130px;">Adicionar Formação</label>
             </div>
         </div>
         
@@ -136,29 +135,28 @@
         <template id="template_experiencia">
             <div class="row alinhaCampo">
                 <div class="col-4">
-                    <label for="fempresa" class="form-label">Empresa:</label>
-                    <input type="text" id="fempresa" class="form-control" required>
+                    <label for="empresa[]" class="form-label">Empresa:</label>
+                    <input type="text" id="empresa" name="empresa[]" class="form-control" required>
                 </div>
                 <div class="col-2">
-                    <label for="fEntrada" class="form-label">Ano de Entrada:</label>
-                    <input type="text" id="fEntrada" class="form-control" required>
+                    <label for="anoEntrada[]" class="form-label">Ano de Entrada:</label>
+                    <input type="text" id="anoEntrada" name="anoEntrada[]" class="form-control" required>
                 </div>
                 <div class="col-2">
-                    <label for="fSaida" class="form-label">Ano de Saída:</label>
-                    <input type="text" id="fSaida" class="form-control" required>
+                    <label for="anoSaida[]" class="form-label">Ano de Saída:</label>
+                    <input type="text" id="anoSaida" name="anoSaida[]" class="form-control" required>
                 </div>
                 <div class="col-4">
-                    <label for="fCargo" class="form-label">Cargo:</label>
-                    <input type="text" id="fCargo" class="form-control" required>
+                    <label for="cargo[]" class="form-label">Cargo:</label>
+                    <input type="text" id="cargo" name="cargo[]" class="form-control" required>
                 </div>
                 <div class="alinhaCampo">
-                    <label for="fatividade" class="form-label">Atividade:</label>
-                    <input type="text" id="fatividade" class="form-control" required>
+                    <label for="atividade[]" class="form-label">Atividade:</label>
+                    <input type="text" id="atividade" name="atividade[]" class="form-control" required>
                 </div>
             </div>
             <hr style="border-color: #883677; margin: 20px 20px;">
         </template>
-
 
         <div id="experienciasContainer"></div>
 
@@ -167,7 +165,7 @@
                 <button type="button" class="btn_add_experiencia">+</button>
             </div>
             <div class="col-11">
-                <label for="addExp" class="form-label" style="margin-top: 22px; margin-left: -145px;">Adicionar Experiência</label>
+                <label for="addExp" class="form-label" style="margin-top: 22px; margin-left: -130px;">Adicionar Experiência</label>
             </div>
         </div>
 
@@ -180,7 +178,7 @@
         </div>
 
         <div class="alinhaCampo">
-            <input type="text" id="finfo" class="form-control" required>
+            <input type="text" id="info" name="info" class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg btn-gerar-pdf" style="background-color: #883677; border-color: #883677; margin: 40px; float: right">Gerar PDF</button>
