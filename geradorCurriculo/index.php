@@ -17,9 +17,9 @@
     </header>
 
     <div class="corpo">
-        <h2 class="titulo__fonte">
+        <h5 class="titulo__fonte">
             Dados Pessoais:
-        </h2>
+        </h5>
     </div>
 
     <form action="geraPdfCurriculo.php" method="post">
@@ -73,10 +73,92 @@
                 <input type="email" id="femail" class="form-control" require>
             </div>
         </div>
+        
+        <hr style="border-color: #883677; margin: 20px 20px;">
+
+        <div class="corpo">
+            <h5 class="titulo__fonte">
+                Objetivo:
+            </h5>
+        </div>
 
         <div class="alinhaCampo">
-            <input type="submit" value="Gerar PDF">
+            <input type="text" id="fobjetivo" class="form-control" require>
         </div>
+
+        <hr style="border-color: #883677; margin: 20px 20px;">
+
+        <div class="corpo">
+            <h5 class="titulo__fonte">
+                Formação Acadêmica:
+            </h5>
+        </div>
+
+        <div class="alinhaCampo">
+            <label for="fcurso" class="form-label">Curso:</label>
+            <input type="text" id="fcurso" class="form-control" require>
+        </div>
+
+        <div class="row alinhaCampo">
+            <div class="col-9">
+                <label for="finst" class="form-label">Instituição:</label>
+                <input type="text" id="finst" class="form-control" require>
+            </div>
+            <div class="col-3">
+                <label for="fdateConclusao" class="form-label">Ano de Conclusão:</label>
+                <input type="date" id="fdateConclusao" class="form-control" require>
+            </div>
+        </div>
+
+        <! -- CRIAR BOTAO DE ADICIONAR MAIS CURSOS -->
+        
+        <hr style="border-color: #883677; margin: 20px 20px;">
+
+        <div class="corpo">
+            <h5 class="titulo__fonte">
+                Experiência Profissional:
+            </h5>
+        </div>
+
+        <div class="row alinhaCampo">
+            <div class="col-4">
+                <label for="fempresa" class="form-label">Empresa:</label>
+                <input type="text" id="fempresa" class="form-control" require>
+            </div>
+            <div class="col-2">
+                <label for="fEntrada" class="form-label">Ano de Entrada:</label>
+                <input type="text" id="fEntrada" class="form-control" require>
+            </div>
+            <div class="col-2">
+                <label for="fSaida" class="form-label">Ano de Saída:</label>
+                <input type="text" id="fSaida" class="form-control" require>
+            </div>
+            <div class="col-4">
+                <label for="fCargo" class="form-label">Cargo:</label>
+                <input type="text" id="fCargo" class="form-control" require>
+            </div>
+            <div class="alinhaCampo">
+                <label for="fatividade" class="form-label">Atividade:</label>
+                <input type="text" id="fatividade" class="form-control" require>
+            </div>
+
+            <! -- CRIAR BOTAO DE ADICIONAR MAIS experiencias -->
+            
+        </div>
+
+        <hr style="border-color: #883677; margin: 20px 20px;">
+
+        <div class="corpo">
+            <h5 class="titulo__fonte">
+                Informações Adicionais:
+            </h5>
+        </div>
+
+        <div class="alinhaCampo">
+            <input type="text" id="finfo" class="form-control" require>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-gerar-pdf" style="background-color: #883677; border-color: #883677; margin: 40px; float: right;">Gerar PDF</button>
 
     </form>
 
